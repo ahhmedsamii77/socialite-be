@@ -27,7 +27,7 @@ export const s3Config = () => {
 
 // upload file
 export async function uploadFile({
-  Bucket = ,
+  Bucket = process.env.S3_BUCKET_NAME ,
   path = "general",
   file,
   ACL = "private",
