@@ -38,10 +38,7 @@ export async function bootstrap() {
   // confgure express
   app.use(
     express.json(),
-    cors({
-      origin: process.env.CLIENT_URL || "http://localhost:5173",
-      credentials: true,
-    }),
+    cors(),
     helmet(),
     rateLimiter,
   );
