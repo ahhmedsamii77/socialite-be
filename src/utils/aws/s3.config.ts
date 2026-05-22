@@ -27,7 +27,7 @@ export const s3Config = () => {
 
 // upload file
 export async function uploadFile({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = ,
   path = "general",
   file,
   ACL = "private",
@@ -59,7 +59,7 @@ export async function uploadFile({
 
 // upload large file
 export async function uploadLargeFile({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   path = "general",
   file,
   ACL = "private",
@@ -115,7 +115,7 @@ export async function uploadFiles({
 
 // create presigned url
 export async function createPresignedUrl({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   path = "general",
   ACL = "private",
   ContentType,
@@ -145,7 +145,7 @@ export async function createPresignedUrl({
 
 // get file
 export async function getFile({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   Key,
 }: {
   Bucket?: string;
@@ -160,7 +160,7 @@ export async function getFile({
 
 // create get presigned url
 export async function createGetPresignedUrl({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   Key,
   downloadName,
   download = "false",
@@ -185,7 +185,7 @@ export async function createGetPresignedUrl({
 
 // delete file
 export async function deleteFile({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   Key,
 }: {
   Bucket?: string;
@@ -200,7 +200,7 @@ export async function deleteFile({
 
 // delete files
 export async function deleteFiles({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   keys,
   Quiet = false,
 }: {
@@ -220,7 +220,7 @@ export async function deleteFiles({
 
 // list files
 export async function listFiles({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   path,
 }: {
   Bucket?: string;
@@ -235,7 +235,7 @@ export async function listFiles({
 
 // delete folder by prefix
 export async function deleteFolderByPrefix({
-  Bucket = process.env.S3_Bucket_NAME,
+  Bucket = process.env.S3_BUCKET_NAME,
   path,
 }: {
   Bucket?: string;
